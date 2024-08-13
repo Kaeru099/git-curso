@@ -1,0 +1,63 @@
+Crear un archivo en git:
+touch nombre del archivo.extensión
+
+Comando para inicializar un repositorio:
+git init
+
+Comando para añadir los archivos al área de preparación:
+git add (nombre del archivo o . para añadir todos los archivos modificados)
+
+Comando para quitar los archivos del área de preparación:
+git rm --cached (nombre del archivo o . para quitar todos los archivos modificados)
+
+Comando para hacer el commit:
+git commit -m "descripción del commit" -a
+
+Comando para saltar el área de preparación y hacer el commit directamente:
+git commit -a
+
+Comando para restaurar un archivo que se eliminó en local:
+git restore (nombre del archivo)
+
+Comando para eliminar todos los cambios que se hicieron en local y regresar al último commit:
+git checkout (nombre del archivo)
+
+Comando para descartar los cambios en el repositorio y en el área de preparación:
+git reset --hard
+
+Comando para renombrar un archivo:
+git mv (nombre del archivo) (nuevo nombre del archivo)
+
+Comando para mostrar el status del repositorio de manera abreviada:
+git status -s o git status --short
+
+Comando para mostrar información sobre el archivo:
+git show (nombre del archivo)
+
+Comando para ver las diferencias entre el área de preparación y el commit:
+git diff --staged
+git diff (caracteres del hash de los commit a comparar)
+git diff --name-only (caracteres del hash de los commit para ver el nombre de los archivos que cambiaron)
+git diff --word-diff (caracteres del hash de los commit para ver el contenido que cambió en los archivos)
+
+Comando para ver información de los commit:
+git log (--oneline para ver la información abreviada)
+
+Modificar el mensaje de un commit:
+git commit --amend
+
+Modificar un commit anterior (no recomendado):
+git rebase -i head~3 (el último numero indica cuantos commits hacia atrás se retrocede, luego en el editor cambiar "pick" por "edit" en el commit que se desea modificar)
+git rebase --continue (para devolver los commits posteriores que se borraron)
+
+Retroceder a un commit anterior:
+git reset --soft (hash del commit)
+git reset --soft head~1 (otra manera de retroceder. El último número indica cuantos commits retroceder)
+git reset --mixed (hash del commit) (otra manera de retroceder a un commit pero se limpia el área de preparación)
+git reset --hard (hash del commit) (otra manera de retroceder a un commit pero se limpia el área de preparación y se restaura todo, eliminando las modificaciones de los commits. SIRVE PARA RETROCEDER UN MERGE)
+
+Mostrar los nombres de los archivos en un commit:
+git ls-tree -r --name-only hash-del-commit
+
+Ver todos los registros del head para restaurar un commit:
+git reflog

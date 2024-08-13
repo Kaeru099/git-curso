@@ -1,0 +1,34 @@
+Ver todas las ramas que tenemos creadas:
+git branch
+
+Crear una rama (con kebab case o dash case):
+git branch nombre-de-la-rama
+
+Moverse de la rama principal a una rama secundaria:
+git checkout nombre-de-la-rama (manera convencional)
+git switch nombre-de-la-rama (manera actual recomendada)
+
+Crear una rama y automáticamente moverse a ella:
+git switch -c nombre-de-la-rama
+
+Borrar una rama (PRIMERO MOVERSE A OTRA RAMA ANTES DE BORRARLA):
+git branch -d nombre-de-la-rama
+
+Cambiar el nombre de una rama:
+git branch -m nombre-de-la-rama (actual) nuevo-nombre (esto se hace si estamos en una rama distinta a la que queremos modificar)
+git branch -m nuevo-nombre (esto se hace para cambiar el nombre de la rama en la que estamos)
+
+Fusionar una rama con la rama principal (DEBO ESTAR EN LA RAMA A LA QUE QUIERO SE LE FUSIONEN, EJ: master):
+git merge nombre-de-la-rama-a-fusionar
+
+Mostrar todos los commits en todas las ramas:
+git log --oneline -- all
+
+Mostrar los commits de manera más visual de las ramas:
+git log --oneline --all --graph
+
+Ver un git log mejorado:
+git log --oneline --all --graph --pretty=format:"%C(auto)%h%d %s %C(black)%C(bold)%cr"
+
+Ejemplo de crear un alias con el git log mejorado:
+git config --global alias.log-mejorado "log --oneline --all --graph --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr'"

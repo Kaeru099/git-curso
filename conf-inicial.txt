@@ -1,0 +1,23 @@
+Comando para configurar el usuario de git:
+git config --global user.name "nombre"
+
+Comando para configurar el correo de git:
+git config --global user.email "correo"
+
+Comando para ver todas las configuraciones de git:
+git config --list
+
+Comando para ver la lista de configuraciones ya establecidas:
+git config --global --list
+
+Comando para configurar el editor de texto de git a VS Code:
+git config --global core.editor "code --wait"
+
+Comando para configurar el color de la interfaz:
+git config --global color.ui true
+
+Comando para configurar la compatibilidad de salto de línea:
+git config --global core.autocrlf true (Para Mac o Linux se cambia el "true" por "input")
+
+Comando para configurar la cantidad de caracteres del hash que se desea ver en la abreviación:
+git config --global core.abbrev 5

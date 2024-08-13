@@ -1,0 +1,15 @@
+Ignorar archivos por tipo dentro de .gitignore:
+*.extensión-del-archivo
+!nombre.extensión-del-archivo (si se ignoran los archivos por tipo, así se designora un archivo que esté dentro del grupo de archivos)
+
+Ignorar archivos dentro de una carpeta dentro de .gitignore:
+nombre-del-directorio/
+!nombre-del-directorio/nombre.extensión-del-archivo (designorar un archivo dentro de un directorio)
+
+Ignorar archivos por últimos caracteres (ejemplos):
+*).txt o copia.txt (los archivos que terminan en 'copia' o ')')
+
+IMPORTANTE: si se hizo un commit de un archivo que se quería ignorar y luego se introduce en el .gitignore, git lo seguirá mostrando. Hay que eliminarlo, hacer el commit y luego introducirlo nuevamente ya ignorandolo con el .gitignore
+
+Configurar un archivo .gitignore global:
+git config --global core.excludesfile ruta-donde-esté-el-archivo-.gitignore_global

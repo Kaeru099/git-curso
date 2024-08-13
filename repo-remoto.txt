@@ -1,0 +1,19 @@
+Clonar un repo remoto:
+git clone url-del-repo.git
+
+Subir los cambios al repo remoto:
+git push origin nombre-de-la-rama
+
+Descargar los cambios del repo remoto:
+git pull
+
+Observar los cambios al actualizar el repo local:
+git fetch
+
+Visualizar los cambios en la rama del servidor:
+git switch --detach origin/master
+
+Pasos para migrar un repo local a un repo remoto:
+git remote add origin url-del-repo.git
+git branch -M main
+git push -u origin main

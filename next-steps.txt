@@ -1,0 +1,17 @@
+Consejos:
+Reforzar git fetch
+Siempre trabajar con ramas
+Hacer commits con cambios realmente importantes
+Hacer git pull frecuentemente
+
+Investigar:
+Git stash
+Git cherry-pick
+Estrategias de branching
+Milestones
+Rebase y squash
+Submodulos
+Git hooks
+Git bisecks
+Git flow
+Github flow
